@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lautiti – Edición Cumpleaños 🎂</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="confetti-canvas"></canvas>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-logo">SOFI <span>STORE</span></div>
+  <div class="nav-links">
+    <a href="#producto">Producto</a>
+    <a href="#milestones">Nuestra historia</a>
+    <a href="#descripcion">Descripción</a>
+    <a href="#momentos">Momentos</a>
+    <a href="#reviews">Reseñas</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="producto">
+  <div class="hero-left">
+    <div class="hero-tag">
+      <div class="dot"></div>
+      Edición Cumpleaños · 12 Marzo 2026
+    </div>
+    <h1>LAUTARO<br><span class="name-blue">MENDOZA</span></h1>
+    <p class="hero-edition">Lanzamiento 2004 · Stock: 1/1 · Irreemplazable</p>
+    <div class="hero-badges">
+      <div class="hbadge blue">✓ Modelo Certificado</div>
+      <div class="hbadge yellow">★ Premium Lifetime</div>
+      <div class="hbadge pink">♡ Disponible en mi vida</div>
+    </div>
+    <div class="hero-price">
+      <span class="price-main">FELICES 22 AÑOS, AMOR 🎂</span>
+    </div>
+    <button class="main-btn" onclick="launchConfetti()">
+      Agregar a mi vida <span class="btn-arrow">→</span>
+    </button>
+  </div>
+
+  <div class="hero-img-wrap">
+    <div class="hero-img-ring"></div>
+    <img src="media/libro.png" alt="Lautaro Mendoza" class="hero-img">
+    <div class="hero-float-badge">
+      <div class="fbl">Modelo</div>
+      <div class="fbv">Premium Lifetime</div>
+    </div>
+    <div class="hero-float-badge2">
+      <div class="fbl">Versión</div>
+      <div class="fbv">v22.0 🎉</div>
+    </div>
+  </div>
+</section>
+
+<!-- MILESTONES -->
+<section class="milestones-section" id="milestones">
+  <div class="milestones-inner">
+    <div class="section-label light">Historial de actualizaciones</div>
+    <h2 class="milestones-title">Nuestra historia, en números</h2>
+
+    <div class="milestones-grid">
+
+      <div class="milestone-card reveal">
+        <div class="milestone-icon">👀</div>
+        <div class="milestone-date">30 Julio 2023</div>
+        <div class="milestone-name">Nos conocimos</div>
+        <div class="milestone-count">
+          <span class="milestone-days" data-from="2023-07-30">—</span>
+          <span class="milestone-days-label">días desde ese momento</span>
+        </div>
+        <p class="milestone-desc">No sabía que ese día iba a cambiar todo. Fue simple, natural, pero distinto.</p>
+      </div>
+
+      <div class="milestone-card reveal reveal-d1">
+        <div class="milestone-icon">💋</div>
+        <div class="milestone-date">11 Noviembre 2023</div>
+        <div class="milestone-name">Primer beso</div>
+        <div class="milestone-count">
+          <span class="milestone-days" data-from="2023-11-11">—</span>
+          <span class="milestone-days-label">días desde ese momento</span>
+        </div>
+        <p class="milestone-desc">La confirmación de que lo que crecía entre nosotros no era solo amistad.</p>
+      </div>
+
+      <div class="milestone-card reveal reveal-d2">
+        <div class="milestone-icon">💙</div>
+        <div class="milestone-date">13 Noviembre 2023</div>
+        <div class="milestone-name">Me pidió ser su novia</div>
+        <div class="milestone-count">
+          <span class="milestone-days" data-from="2023-11-13">—</span>
+          <span class="milestone-days-label">días siendo tuyos</span>
+        </div>
+        <p class="milestone-desc">La mejor (no) pregunta que me hicieron en la vida. La respuesta obvio que fue sí.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COUNTER BANNER -->
+<div class="counter-banner">
+  <div class="counter-item">
+    <div class="counter-num" id="days-together">—</div>
+    <div class="counter-label">Días de novios</div>
+  </div>
+  <div class="counter-sep"></div>
+  <div class="counter-item">
+    <div class="counter-num">22</div>
+    <div class="counter-label">Años de existencia</div>
+  </div>
+  <div class="counter-sep"></div>
+  <div class="counter-item">
+    <div class="counter-num">∞</div>
+    <div class="counter-label">Razones para quererte</div>
+  </div>
+  <div class="counter-sep"></div>
+  <div class="counter-item">
+    <div class="counter-num">1/1</div>
+    <div class="counter-label">Stock disponible</div>
+  </div>
+</div>
+
+<!-- DESCRIPCIÓN -->
+<section class="desc-section" id="descripcion">
+  <div class="section-label">Descripción extendida</div>
+  <div class="desc-grid">
+    <div class="reveal">
+      <h2 class="desc-big-title">Cada año<br>que pasa,<br><span>mejor.</span></h2>
+    </div>
+    <div class="desc-right reveal reveal-d2">
+      <p class="desc-text">
+        Hay personas que cambian con el tiempo.
+        Vos evolucionás.
+        No para impresionar, sino porque siempre estás buscando ser un poco mejor que ayer.
+      </p>
+
+      <p class="desc-text">
+        Me gusta cómo pensás. Cómo actuás cuando algo importa.
+        Me gusta que no seas perfecto, pero sí consciente.
+        Eso es lo que hace que todo lo demás tenga sentido.
+      </p>
+
+      <div class="desc-highlight">
+        Sos hermoso y te admiro mucho.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECS -->
+<section class="specs-section">
+  <div class="section-label light">Especificaciones técnicas</div>
+  <h2 class="specs-title">El producto, en detalle.</h2>
+  <div class="specs-grid">
+    <div class="spec-card reveal"><div class="spec-icon">📦</div><div class="spec-key">Modelo</div><div class="spec-val">Lautaro Mendoza<br>v22.0 — Ed. Cumpleaños</div></div>
+    <div class="spec-card reveal reveal-d1"><div class="spec-icon">📅</div><div class="spec-key">Lanzamiento</div><div class="spec-val">12 de Marzo, 2004<br>Rafaela, Santa Fe</div></div>
+    <div class="spec-card reveal reveal-d3"><div class="spec-icon">⚡</div><div class="spec-key">Características</div><div class="spec-val">Amoroso · Gracioso · Sexy</div></div>
+     <div class="spec-card reveal reveal-d3"><div class="spec-icon">❤️</div><div class="spec-key">Lealtad</div><div class="spec-val">100000%</div></div>
+<div class="spec-card reveal reveal-d4"><div class="spec-icon">🔗</div><div class="spec-key">Compatibilidad</div><div class="spec-val">100% compatible<br>con Chofifi. Forever.</div></div>
+    <div class="spec-card reveal reveal-d5"><div class="spec-icon">🛡️</div><div class="spec-key">Garantía</div><div class="spec-val">De por vida.<br>No admite devoluciones.</div></div>
+  </div>
+</section>
+
+<!-- MOMENTOS -->
+<section class="gallery-section" id="momentos">
+  <div class="gallery-header reveal">
+    <h2 class="gallery-title">Momentos<br><span>del producto</span></h2>
+    <p class="gallery-sub">Una colección de instantes que no se olvidan nunca.</p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item reveal"><img src="media/abrazo.jpg" alt="Abrazo"><div class="gallery-item-overlay"><span>EL abrazo</span></div></div>
+    <div class="gallery-item reveal reveal-d1"><video autoplay muted loop playsinline><source src="media/cumpledomingo video.mp4" type="video/mp4"></video><div class="gallery-item-overlay"><span>Risas</span></div></div>
+    <div class="gallery-item reveal reveal-d2"><img src="media/recibida.png" alt="Recibida"><div class="gallery-item-overlay"><span>Mi recibida</span></div></div>
+    <div class="gallery-item reveal"><video autoplay muted loop playsinline><source src="media/cumplevico.mp4" type="video/mp4"></video><div class="gallery-item-overlay"><span>Al sol</span></div></div>
+    <div class="gallery-item reveal reveal-d1"><video autoplay muted loop playsinline><source src="media/cafeteria.mp4" type="video/mp4"></video><div class="gallery-item-overlay"><span>Merendando</span></div></div>
+    <div class="gallery-item reveal reveal-d2"><img src="media/cama.jpg" alt=""><div class="gallery-item-overlay"><span>Nuestro lugar</span></div></div>
+    <div class="gallery-item reveal"><video autoplay muted loop playsinline><source src="media/cordoba.mp4" type="video/mp4"></video><div class="gallery-item-overlay"><span>Córdoba</span></div></div>
+    <div class="gallery-item reveal reveal-d1"><img src="media/primerfoto.jpg" alt="Primera foto"><div class="gallery-item-overlay"><span>Primera foto</span></div></div>
+    <div class="gallery-item reveal reveal-d2"><video autoplay muted loop playsinline><source src="media/guanacovideo.mp4" type="video/mp4"></video><div class="gallery-item-overlay"><span>Joda</span></div></div>
+    <div class="gallery-item reveal"><video autoplay muted loop playsinline><source src="media/riovideo.mp4" type="video/mp4"></video><div class="gallery-item-overlay"><span>San Antonio de Arredondo</span></div></div>
+    <div class="gallery-item reveal reveal-d1"><img src="media/micumple.png" alt="Mi cumple"><div class="gallery-item-overlay"><span>Mi cumple</span></div></div>
+    <div class="gallery-item reveal reveal-d2"><video autoplay muted loop playsinline><source src="media/bañocordoba.mp4" type="video/mp4"></video><div class="gallery-item-overlay"><span>Córdoba</span></div></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section" id="reviews">
+  <div class="section-label reveal">Reseñas verificadas</div>
+  <div class="reviews-grid">
+    <div class="review-card reveal">
+      <div class="review-top"><div><div class="review-author">Sofi</div><div class="review-meta">Compra verificada · 30 Julio 2023</div></div><div class="review-stars">★★★★★</div></div>
+      <p class="review-text">El día que nos conocimos no sabía que estaba frente a alguien que iba a cambiar la forma en la que veo todo. Fue simple, natural, pero distinto. Desde ese momento algo empezó a sentirse bien.</p>
+    </div>
+    <div class="review-card reveal reveal-d1">
+      <div class="review-top"><div><div class="review-author">Chofi</div><div class="review-meta">Compra verificada · 11 Noviembre 2023</div></div><div class="review-stars">★★★★★</div></div>
+      <p class="review-text">Nuestro primer beso fue la confirmación de que lo que estaba creciendo no era casualidad. Sentí seguridad, emoción y una conexión que no se explica, solo se vive.</p>
+    </div>
+    <div class="review-card reveal reveal-d2">
+      <div class="review-top"><div><div class="review-author">Chofifi</div><div class="review-meta">Compra verificada · 13 Noviembre 2024</div></div><div class="review-stars">★★★★★</div></div>
+      <p class="review-text">Un año después confirmé que no fue solo emoción del inicio. Fue decisión, compromiso y crecimiento juntos. Con vos aprendí que el amor también es construir.</p>
+    </div>
+    <div class="review-card featured reveal reveal-d3">
+      <div class="review-top"><div><div class="review-author">Chofifififi ♡</div><div class="review-meta">Compra verificada · 12 Marzo 2026</div></div><div class="review-stars">★★★★★</div></div>
+      <p class="review-text">Hoy, en tu cumpleaños, no solo celebro un año más tuyo. Celebro que sigas eligiendo estar, crecer y compartir tu vida conmigo. No sos solo alguien que llegó… sos alguien que se quedó. Y eso es lo más valioso de todo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CARTA -->
+<section class="carta-section" id="carta">
+  <div class="carta-label">Para vos</div>
+  <h2 class="carta-title">Una carta de tu persona favorita</h2>
+  <p class="carta-subtitle">Hacé click en el sobre para abrirlo ♡</p>
+
+  <div class="scene">
+    <div class="envelope" id="envelope" onclick="abrirSobre()">
+
+      <!-- Cuerpo del sobre -->
+      <div class="env-body"></div>
+      <div class="env-bottom-fold"></div>
+
+      <!-- Solapa superior -->
+      <div class="env-flap" id="envFlap">
+        <div class="env-flap-face"></div>
+      </div>
+
+      <!-- Sello -->
+      <div class="env-seal" id="envSeal">💙</div>
+
+      <!-- Carta (dentro del sobre, sale hacia adelante) -->
+      <div class="letter" id="letter">
+        <div class="letter-lines"></div>
+        <div class="letter-inner">
+          <div class="letter-header">
+            <span class="letter-logo">Chofifi</span>
+            <span class="letter-date">12 de Marzo, 2026</span>
+          </div>
+          <p class="letter-saludo">Lautiti,</p>
+          <p class="letter-texto">
+            No sé si alguna vez te dije bien cuánto cambiaste mi vida. 
+            Desde ese día que nos conocimos, supe que eras distinto. 
+            No fue magia, fue algo más real que eso — fue sentirme segura, cómoda, yo misma, al lado tuyo.
+          </p>
+          <p class="letter-texto">
+            Cada día que pasa te admiro más. Por cómo sos, por cómo crecés, por cómo me tratás. 
+            No tengo dudas de que te elegí bien y que te volvería a elegir mil veces.
+          </p>
+          <p class="letter-texto">
+            Hoy cumplís 22 años y quiero que sepas que estoy muy orgullosa de la persona que sos.
+             Ojalá este año te traiga todo lo que merecés y querés — que es muchísimo.
+
+          </p>
+          <p class="letter-texto">
+            Gracias por ser vos, por elegirme, por compartir tu vida conmigo. 
+            Te amo con todo lo que soy y todo lo que tengo.
+            </p>
+
+          <div class="letter-firma">
+            Con todo mi amor,
+            <strong>Chofifi ♡</strong>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">SOFI STORE</div>
+  <div class="footer-mid">© 2026 Edición única, creada con <span class="footer-heart">♡</span> por Sofi.<br>Stock: 1/1 — Agotado para siempre.</div>
+  <div class="footer-right">Feliz cumple, Lautiti 🎂</div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({ duration: 900, once: true });
+
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+function daysSince(dateStr) {
+  return Math.floor((new Date() - new Date(dateStr)) / 86400000);
+}
+
+document.getElementById('days-together').textContent =
+  daysSince('2023-11-13').toLocaleString('es-AR');
+
+document.querySelectorAll('.milestone-days[data-from]').forEach(el => {
+  el.textContent = daysSince(el.dataset.from).toLocaleString('es-AR');
+});
+
+const revealEls = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+revealEls.forEach(r => obs.observe(r));
+
+// CONFETTI
+const canvas = document.getElementById('confetti-canvas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+window.addEventListener('resize', () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; });
+
+let particles = [];
+const COLORS = ['#1B6BFF','#4D8DFF','#FFD23F','#FF5C8A','#ffffff','#E8F0FF','#0A4FCC'];
+
+function Particle(x, y) {
+  this.x = x; this.y = y;
+  this.vx = (Math.random() - 0.5) * 12;
+  this.vy = Math.random() * -14 - 4;
+  this.alpha = 1;
+  this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+  this.size = Math.random() * 9 + 4;
+  this.rot = Math.random() * Math.PI * 2;
+  this.rotV = (Math.random() - 0.5) * 0.25;
+  this.shape = Math.random() > 0.4 ? 'rect' : 'circle';
+}
+
+let animId = null;
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  particles = particles.filter(p => p.alpha > 0.02);
+  particles.forEach(p => {
+    p.vy += 0.38; p.x += p.vx; p.y += p.vy;
+    p.alpha -= 0.013; p.rot += p.rotV;
+    ctx.save();
+    ctx.globalAlpha = Math.max(0, p.alpha);
+    ctx.fillStyle = p.color;
+    ctx.translate(p.x, p.y);
+    ctx.rotate(p.rot);
+    if (p.shape === 'rect') ctx.fillRect(-p.size/2, -p.size/4, p.size, p.size*0.5);
+    else { ctx.beginPath(); ctx.arc(0, 0, p.size/2, 0, Math.PI*2); ctx.fill(); }
+    ctx.restore();
+  });
+  if (particles.length > 0) { animId = requestAnimationFrame(animate); }
+  else { ctx.clearRect(0, 0, canvas.width, canvas.height); animId = null; }
+}
+
+function launchConfetti() {
+  const cx = window.innerWidth / 2;
+  const cy = window.innerHeight * 0.65;
+  for (let i = 0; i < 220; i++) {
+    particles.push(new Particle(cx + (Math.random()-0.5)*300, cy));
+  }
+  if (!animId) animate();
+}
+
+// SOBRE
+let sobreabierto = false;
+function abrirSobre() {
+  if (sobreabierto) return;
+  sobreabierto = true;
+
+  const envelope = document.getElementById('envelope');
+  const flap     = document.getElementById('envFlap');
+  const seal     = document.getElementById('envSeal');
+  const letter   = document.getElementById('letter');
+
+  envelope.classList.add('opened');
+
+  // 1. Sello desaparece
+  seal.classList.add('hidden');
+
+  // 2. Solapa se abre
+  setTimeout(() => flap.classList.add('open'), 250);
+
+  // 3. Carta sale hacia adelante
+  setTimeout(() => letter.classList.add('out'), 750);
+}
+
+window.addEventListener('load', () => setTimeout(launchConfetti, 500));
+</script>
+</body>
+</html>
