@@ -108,8 +108,8 @@
 <!-- COUNTER BANNER -->
 <div class="counter-banner">
   <div class="counter-item">
-    <div class="counter-num" id="days-together">—</div>
-    <div class="counter-label">Días de novios</div>
+    <div class="counter-num" id="months-together">—</div>
+    <div class="counter-label">Meses de novios</div>
   </div>
   <div class="counter-sep"></div>
   <div class="counter-item">
@@ -294,8 +294,20 @@ function daysSince(dateStr) {
   return Math.floor((new Date() - new Date(dateStr)) / 86400000);
 }
 
-document.getElementById('days-together').textContent =
-  daysSince('2023-11-13').toLocaleString('es-AR');
+function monthsSince(dateStr) {
+  const d1 = new Date(dateStr);
+  const d2 = new Date();
+  let months = (d2.getFullYear() - d1.getFullYear()) * 12;
+  months -= d1.getMonth();
+  months += d2.getMonth();
+  if (d2.getDate() < d1.getDate()) {
+    months--;
+  }
+  return months;
+}
+
+document.getElementById('months-together').textContent =
+  monthsSince('2023-11-13').toLocaleString('es-AR');
 
 document.querySelectorAll('.milestone-days[data-from]').forEach(el => {
   el.textContent = daysSince(el.dataset.from).toLocaleString('es-AR');

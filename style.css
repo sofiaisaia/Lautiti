@@ -298,7 +298,7 @@ nav.scrolled { box-shadow: 0 4px 24px rgba(27,107,255,0.12); }
   flex-direction: column;
   margin-bottom: 20px;
 }
-.milestone-days {
+.milestone-days, .milestone-months {
   font-family: 'Archivo Black', sans-serif;
   font-size: 3rem;
   color: var(--blue-mid);
